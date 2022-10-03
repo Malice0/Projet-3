@@ -13,7 +13,7 @@ header {
   border-bottom: 2px solid lightgray;
 }
 header img {
-  width: 45%;
+  width: 40%;
   margin: 5% 0% 3%;
 }
 
@@ -22,17 +22,27 @@ header img {
 }
 
 .explore {
-  background-color: rgba(211, 211, 211, 0.233);
+  text-align: center;
+  background-color: rgba(211, 211, 211, 0.116);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5% 9%;
 }
+.explore h2 {
+  font-size: 230%;
+  margin-bottom: 0%;
+}
+.explore > p {
+  font-size: 150%;
+}
 .explore .button {
-  background-color: #FF79DA;
+  background-color: #9356DC;
   border-radius: 25px;
-  padding: 0% 5%;
+  padding: 0.3% 6%;
+  margin-bottom: 50px;
   color: #fff;
+  box-shadow: 0 3px 8px gray;
 }
 
 .functioning__content {
@@ -51,6 +61,9 @@ header img {
   gap: 10px;
   box-shadow: 0px 1px 10px lightgray;
   width: 90%;
+}
+.content__item:hover {
+  background-color: #9356DC;
 }
 .content__item div {
   background-color: #9356DC;
@@ -110,9 +123,14 @@ main .menu__item {
   align-items: center;
 }
 
-.button {
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-menu {
   width: 35%;
-  background-color: #9356DC;
+  background-color: #9356dc;
   display: flex;
   justify-content: center;
   padding: 3%;
