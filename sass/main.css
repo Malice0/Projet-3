@@ -46,7 +46,7 @@ header img {
   font-size: 150%;
 }
 .explore .button {
-  background-color: #9356DC;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border-radius: 25px;
   padding: 0.3% 6%;
   margin-bottom: 50px;
@@ -117,6 +117,9 @@ header a {
   margin: 0% 20% 0% 5%;
   align-self: center;
 }
+header a .fa-arrow-left {
+  font-size: 25px;
+}
 
 .background img {
   width: 100%;
@@ -135,12 +138,16 @@ main {
 }
 main .menu__item {
   background-color: #fff;
+  box-shadow: 0px 1px 10px lightgray;
   border-radius: 20px;
-  padding: 0px 20px;
+  padding: 7px 20px 13px 15px;
   margin: 5% 0%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+}
+main .menu__item p, main .menu__item h3 {
+  margin: 3.5% 0%;
 }
 
 .menu-restaurant {
@@ -150,6 +157,7 @@ main .menu__item {
 }
 .menu-restaurant .fa-heart {
   margin-right: 4%;
+  font-size: 30px;
 }
 
 .button-container {
@@ -160,7 +168,7 @@ main .menu__item {
 
 .button-menu {
   width: 40%;
-  background-color: #9356dc;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   display: flex;
   justify-content: center;
   padding: 3.5%;
