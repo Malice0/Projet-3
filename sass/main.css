@@ -22,7 +22,7 @@ header img {
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.5);
   font-size: large;
 }
 
@@ -109,15 +109,15 @@ header img {
   margin: 0%;
 }
 
-header {
+.header-menu {
   display: flex;
   justify-content: left;
 }
-header a {
+.header-menu a {
   margin: 0% 20% 0% 5%;
   align-self: center;
 }
-header a .fa-arrow-left {
+.header-menu a .fa-arrow-left {
   font-size: 25px;
 }
 

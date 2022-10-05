@@ -61,7 +61,7 @@ header {
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.5);
   font-size: large;
   // space location icon, city
 }
@@ -146,7 +146,7 @@ header {
   }
 }
 // menu page start
-header{
+.header-menu{
   display: flex;
   justify-content: left;
   a {
