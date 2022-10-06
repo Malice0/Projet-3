@@ -45,7 +45,7 @@ h1 {
 header {
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid lightgray;
+  box-shadow: inset 0px -1px 2px lightgray;
   // autre technique de border
   img {
     width: 40%;
@@ -126,6 +126,15 @@ header {
   box-shadow: 0px 1px 10px lightgray;
   border-radius: 20px;
   margin: 4% 0%;
+  position: relative;
+  .new {
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    background-color: $tertiary;
+    // color vairable darkness 20% $tertiary
+    padding: 1.5%;
+  }
 }
 .restaurant__item-img img {
   width: 100%;
@@ -134,15 +143,32 @@ header {
   border-radius: 20px 20px 0px 0px;
 }
 .restaurant__item-text {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3%;
+  padding: 3% 5% 4% 3%;
   h3 {
     margin: 0%;
   }
   p {
     margin: 0%;
+  }
+  .fa-heart {
+    font-size: 25px;
+  }
+  .fa-solid {
+    position: absolute;
+    background: linear-gradient(0deg,$sondary 0%,$primary 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    right: 5%;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
   }
 }
 // menu page start
@@ -186,6 +212,22 @@ main {
     p, h3 {
       margin: 3.5% 0%;
     }
+  }
+}
+.menu {
+  >p {
+    position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    width: 8%;
+    height: 2.5px;
+    transform-origin: left;
+    background-color: $tertiary;
+    
+  }
   }
 }
 .menu-restaurant{
