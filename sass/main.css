@@ -229,4 +229,44 @@ footer {
 
 .footer-logo img {
   width: 30%;
+}
+
+@media all and (min-width: 767px) {
+  h2 {
+    font-size: 190%;
+  }
+  .content__item {
+    gap: 25px;
+    width: 85%;
+    font-size: 130%;
+  }
+  .content__item div {
+    background-color: #9356DC;
+    color: #fff;
+    padding: 0.5% 2%;
+    margin-left: -10px;
+  }
+  .restaurant__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .restaurant__item {
+    flex-basis: 50%;
+  }
+  footer {
+    gap: 20px;
+    padding: 5% 5% 10% 10%;
+  }
+  .footer-logo img {
+    width: 35%;
+  }
+  .header-menu a {
+    margin: 0% 20% 0% 5%;
+    align-self: center;
+  }
+  .header-menu a .fa-arrow-left {
+    font-size: 35px;
+  }
 }/*# sourceMappingURL=main.css.map */

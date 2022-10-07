@@ -151,7 +151,6 @@ header {
   display: flex;
   justify-content: left;
   a {
-    // icon size bigger
     .fa-arrow-left {
       font-size: 25px;
     }
@@ -283,12 +282,65 @@ footer {
 // header end
 
 // main start
+h2 {
+  font-size: 190%;
+}
+
+.content__item {
+  gap: 25px;
+  width: 85%;
+  font-size: 130%;
+  div {
+    background-color: $primary;
+    color: #fff;
+    padding: 0.5% 2%;
+    margin-left: -10px;
+  }
+}
+
+.restaurant__content {
+  // margin: 4% 0%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.restaurant__item {
+  flex-basis: calc(100%/2);
+}
 
 // main end
 
 // footer start
+footer {
+  gap: 20px;
+  padding: 5% 5% 10% 10%;
+}
+
+.footer-logo {
+  img {
+    width: 35%;
+  }
+}
 
 // footer end
+
+// menu page start
+.header-menu{
+  a {
+    .fa-arrow-left {
+      font-size: 35px;
+    }
+    margin: 0% 20% 0% 5%;
+    align-self: center;
+  }
+}
+.menu {
+  >p {
+position: relative;
+    
+
+
 
 }
 
