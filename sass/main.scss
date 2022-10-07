@@ -15,31 +15,6 @@ body {
 h1 {
   font-family: "Shrikhand", cursive;
 }
-
-// header start
-
-// header end
-
-// main start
-
-// main end
-
-// footer start
-
-// footer end
-
-// responsive start
-
-// tab start
-
-@media all and (max-width: 992px) {
-}
-// tab end
-
-// mobile start
-
-@media all and (max-width: 767px) {
-}
 // header start
 
 header {
@@ -112,7 +87,7 @@ header {
   font-weight: 600;
   &:hover {
     // color light $primary
-    background-color: $primary;
+    background-color: #9256dc1c;
   }
   div {
     background-color: $primary;
@@ -254,6 +229,7 @@ main {
   border-radius: 20px;
   color: #fff;
   box-shadow: 0 3px 8px gray;
+  cursor: pointer;
 }
 // menu page end
 
@@ -278,6 +254,44 @@ footer {
 }
 
 // footer end
+
+// responsive start
+
+// desktop start
+
+@media all and (min-width: 993px) {
+// header start
+
+// header end
+
+// main start
+
+// main end
+
+// footer start
+
+// footer end
+
+}
+// tab end
+
+
+// tab start
+@media all and (min-width: 767px) {
+// header start
+
+// header end
+
+// main start
+
+// main end
+
+// footer start
+
+// footer end
+
+}
+
 
 // mobile end
 

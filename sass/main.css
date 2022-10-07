@@ -73,7 +73,7 @@ header img {
   font-weight: 600;
 }
 .content__item:hover {
-  background-color: #9356DC;
+  background-color: rgba(146, 86, 220, 0.1098039216);
 }
 .content__item div {
   background-color: #9356DC;
@@ -214,6 +214,7 @@ main .menu__item p, main .menu__item h3 {
   border-radius: 20px;
   color: #fff;
   box-shadow: 0 3px 8px gray;
+  cursor: pointer;
 }
 
 footer {
