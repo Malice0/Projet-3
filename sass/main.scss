@@ -2,14 +2,13 @@ $primary: #9356dc;
 $sondary: #ff79da;
 $tertiary: #99e2d0;
 // gray: ;
-// $grandiant: ;
 
 // icon:hover: $primary
-// icon:hover: gradiant
 
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
+  background-color: rgb(246, 246, 246);
 }
 
 h1 {
@@ -21,7 +20,7 @@ header {
   display: flex;
   justify-content: center;
   box-shadow: inset 0px -1px 2px lightgray;
-  // autre technique de border
+  background-color: hsl(0, 0%, 100%);
   img {
     width: 40%;
     margin: 5% 0% 3%;
@@ -36,18 +35,16 @@ header {
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: hsl(0, 0%, 90%);
   font-size: large;
-  // space location icon, city
 }
 
 .main-second {
   margin: 4%;
 }
 .explore {
-  // dégradé blanc à gris
   text-align: center;
-  background-color: rgba(211, 211, 211, 0.116);
+  background-color: hsl(0, 0%, 95%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,11 +66,15 @@ header {
   }
 }
 
+.functioning {
+  background-color: hsl(0, 0%, 100%);
+  padding: 4% 4% 16% 4%;
+}
 .functioning__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   div {
     border-radius: 15px;
   }
@@ -82,19 +83,26 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
-  box-shadow: 0px 1px 10px lightgray;
+  box-shadow: 0px 4px 6px hsl(0, 0%, 95%);
   width: 90%;
+  padding: 1%;
+  background-color: hsl(0, 0%, 97%);
   font-weight: 600;
   &:hover {
-    // color light $primary
-    background-color: #9256dc1c;
+    background-color: hsl(267, 66%, 96%);
   }
+  // number
   div {
     background-color: $primary;
     color: #fff;
-    padding: 0.5% 2%;
-    margin-left: -10px;
+    padding: 1% 1.9%;
+    border-radius: 70px;
+    margin-left: -14px;
   }
+}
+
+.content__item:hover i {
+  color: $primary;
 }
 
 .restaurant__item {
@@ -107,8 +115,9 @@ header {
     right: 3%;
     top: 4%;
     background-color: $tertiary;
-    // color vairable darkness 20% $tertiary
+    color: hsl(165, 56%, 40%);
     padding: 1.5%;
+    font-weight: 600;
   }
 }
 .restaurant__item-img img {
@@ -170,10 +179,9 @@ header {
 main {
   background-color: rgb(246, 246, 246);
   padding: 3% 5%;
-  margin-bottom: -26%;
   border-radius: 40px 40px 0px 0px;
   position: relative;
-  top: -50px;
+  top: -40px;
   .menu__item {
     background-color: #fff;
     box-shadow: 0px 1px 10px lightgray;
@@ -197,7 +205,7 @@ main {
       display: block;
       position: absolute;
       bottom: -7px;
-      width: 8%;
+      width: 30px;
       height: 2.5px;
       transform-origin: left;
       background-color: $tertiary;
@@ -217,7 +225,7 @@ main {
 .button-container {
   display: flex;
   justify-content: center;
-  margin: 13% 0% 20% 0%;
+  margin: 13% 0% 0% 0%;
 }
 .button-menu {
   width: 40%;
@@ -225,7 +233,7 @@ main {
   display: flex;
   justify-content: center;
   padding: 3.5%;
-  border-radius: 20px;
+  border-radius: 50px;
   color: #fff;
   box-shadow: 0 3px 8px gray;
   cursor: pointer;
@@ -237,8 +245,8 @@ main {
 // footer start
 
 footer {
-  margin-top: 15%;
-  background-color: rgba(0, 0, 0, 0.74);
+  margin-top: 10%;
+  background-color: hsl(0, 0%, 20%);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -248,7 +256,7 @@ footer {
 
 .footer-logo {
   img {
-    width: 30%;
+    width: 33%;
   }
 }
 
@@ -309,20 +317,6 @@ footer {
 
   // main end
 
-  // footer start
-  footer {
-    gap: 20px;
-    padding: 5% 5% 10% 10%;
-  }
-
-  .footer-logo {
-    img {
-      width: 35%;
-    }
-  }
-
-  // footer end
-
   // menu page start
   .header-menu {
     a {
@@ -337,10 +331,25 @@ footer {
     > p {
       position: relative;
       &::after {
-        width: 6%;
+        width: 4.5%;
       }
     }
   }
+
+  // footer start
+  
+  footer {
+    gap: 20px;
+    padding: 5% 5% 10% 10%;
+  }
+
+  .footer-logo {
+    img {
+      width: 35%;
+    }
+  }
+
+  // footer end
 
   // mobile end
 }
