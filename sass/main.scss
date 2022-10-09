@@ -1,6 +1,6 @@
-$primary: #9356DC;
-$sondary: #FF79DA;
-$tertiary: #99E2D0;
+$primary: #9356dc;
+$sondary: #ff79da;
+$tertiary: #99e2d0;
 // gray: ;
 // $grandiant: ;
 
@@ -56,11 +56,11 @@ header {
     font-size: 230%;
     margin-bottom: 0%;
   }
-  >p {
+  > p {
     font-size: 150%;
   }
   .button {
-    background: linear-gradient(180deg,$sondary 0%,$primary 100%);
+    background: linear-gradient(180deg, $sondary 0%, $primary 100%);
     border-radius: 25px;
     padding: 0.3% 6%;
     margin-bottom: 50px;
@@ -134,7 +134,7 @@ header {
   }
   .fa-solid {
     position: absolute;
-    background: linear-gradient(0deg,$sondary 0%,$primary 100%);
+    background: linear-gradient(0deg, $sondary 0%, $primary 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -147,7 +147,7 @@ header {
   }
 }
 // menu page start
-.header-menu{
+.header-menu {
   display: flex;
   justify-content: left;
   a {
@@ -183,28 +183,28 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    p, h3 {
+    p,
+    h3 {
       margin: 3.5% 0%;
     }
   }
 }
 .menu {
-  >p {
+  > p {
     position: relative;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -7px;
-    width: 8%;
-    height: 2.5px;
-    transform-origin: left;
-    background-color: $tertiary;
-    
-  }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -7px;
+      width: 8%;
+      height: 2.5px;
+      transform-origin: left;
+      background-color: $tertiary;
+    }
   }
 }
-.menu-restaurant{
+.menu-restaurant {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -221,7 +221,7 @@ main {
 }
 .button-menu {
   width: 40%;
-  background: linear-gradient(180deg,$sondary 0%,$primary 100%);
+  background: linear-gradient(180deg, $sondary 0%, $primary 100%);
   display: flex;
   justify-content: center;
   padding: 3.5%;
@@ -259,92 +259,89 @@ footer {
 // desktop start
 
 @media all and (min-width: 993px) {
-// header start
+  // header start
 
-// header end
+  // header end
 
-// main start
+  // main start
 
-// main end
+  // main end
 
-// footer start
+  // footer start
 
-// footer end
-
+  // footer end
 }
 // tab end
 
-
 // tab start
 @media all and (min-width: 767px) {
-// header start
+  // header start
 
-// header end
+  // header end
 
-// main start
-h2 {
-  font-size: 190%;
-}
-
-.content__item {
-  gap: 25px;
-  width: 85%;
-  font-size: 130%;
-  div {
-    background-color: $primary;
-    color: #fff;
-    padding: 0.5% 2%;
-    margin-left: -10px;
+  // main start
+  h2 {
+    font-size: 190%;
   }
-}
 
-.restaurant__content {
-  // margin: 4% 0%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-.restaurant__item {
-  flex-basis: calc(100%/2);
-}
-
-// main end
-
-// footer start
-footer {
-  gap: 20px;
-  padding: 5% 5% 10% 10%;
-}
-
-.footer-logo {
-  img {
-    width: 35%;
-  }
-}
-
-// footer end
-
-// menu page start
-.header-menu{
-  a {
-    .fa-arrow-left {
-      font-size: 35px;
+  .content__item {
+    gap: 25px;
+    width: 85%;
+    font-size: 130%;
+    div {
+      background-color: $primary;
+      color: #fff;
+      padding: 0.5% 2%;
+      margin-left: -10px;
     }
-    margin: 0% 20% 0% 5%;
-    align-self: center;
   }
+
+  .restaurant__content {
+    // margin: 4% 0%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .restaurant__item {
+    flex-basis: calc(100% / 2);
+  }
+
+  // main end
+
+  // footer start
+  footer {
+    gap: 20px;
+    padding: 5% 5% 10% 10%;
+  }
+
+  .footer-logo {
+    img {
+      width: 35%;
+    }
+  }
+
+  // footer end
+
+  // menu page start
+  .header-menu {
+    a {
+      .fa-arrow-left {
+        font-size: 35px;
+      }
+      margin: 0% 20% 0% 5%;
+      align-self: center;
+    }
+  }
+  .menu {
+    > p {
+      position: relative;
+      &::after {
+        width: 6%;
+      }
+    }
+  }
+
+  // mobile end
 }
-.menu {
-  >p {
-position: relative;
-    
-
-
-
-}
-
-
-// mobile end
-
 // responsive end

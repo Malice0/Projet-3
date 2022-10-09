@@ -46,7 +46,7 @@ header img {
   font-size: 150%;
 }
 .explore .button {
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   border-radius: 25px;
   padding: 0.3% 6%;
   margin-bottom: 50px;
@@ -76,7 +76,7 @@ header img {
   background-color: rgba(146, 86, 220, 0.1098039216);
 }
 .content__item div {
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: #fff;
   padding: 0.5% 2%;
   margin-left: -10px;
@@ -92,7 +92,7 @@ header img {
   position: absolute;
   right: 3%;
   top: 4%;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 1.5%;
 }
 
@@ -122,7 +122,7 @@ header img {
 }
 .restaurant__item-text .fa-solid {
   position: absolute;
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,7 +171,8 @@ main .menu__item {
   justify-content: space-between;
   align-items: flex-end;
 }
-main .menu__item p, main .menu__item h3 {
+main .menu__item p,
+main .menu__item h3 {
   margin: 3.5% 0%;
 }
 
@@ -186,7 +187,7 @@ main .menu__item p, main .menu__item h3 {
   width: 8%;
   height: 2.5px;
   transform-origin: left;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 .menu-restaurant {
@@ -207,7 +208,7 @@ main .menu__item p, main .menu__item h3 {
 
 .button-menu {
   width: 40%;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   display: flex;
   justify-content: center;
   padding: 3.5%;
@@ -241,7 +242,7 @@ footer {
     font-size: 130%;
   }
   .content__item div {
-    background-color: #9356DC;
+    background-color: #9356dc;
     color: #fff;
     padding: 0.5% 2%;
     margin-left: -10px;
@@ -268,5 +269,11 @@ footer {
   }
   .header-menu a .fa-arrow-left {
     font-size: 35px;
+  }
+  .menu > p {
+    position: relative;
+  }
+  .menu > p::after {
+    width: 6%;
   }
 }/*# sourceMappingURL=main.css.map */
