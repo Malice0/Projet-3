@@ -175,17 +175,29 @@ main {
   top: -40px;
 }
 
+.menu > p::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4%;
+  height: 3px;
+  background-color: #99e2d0;
+}
+
 .menu__item {
   background-color: #fff;
   box-shadow: 0px 1px 10px hsl(0deg, 0%, 85%);
   border-radius: 20px;
   padding: 7px 20px 13px 15px;
   margin: 5% 0%;
+  gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-.menu__item p,
+.menu__item p {
+  margin: 3.5% 0% 0% 0%;
+}
 .menu__item h3 {
   margin: 3.5% 0%;
 }
@@ -224,8 +236,16 @@ footer {
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
   padding: 5% 5% 10% 5%;
+}
+footer .footer__content {
+  display: flex;
+  flex-direction: column;
+}
+footer div {
+  display: flex;
+  gap: 10px;
 }
 
 .footer-logo img {
@@ -253,7 +273,7 @@ footer {
   .restaurant__content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
   }
   .restaurant__item {
@@ -270,9 +290,14 @@ footer {
   .menu > p::after {
     width: 4.5%;
   }
-  footer {
-    gap: 20px;
-    padding: 5% 5% 10% 10%;
+  .footer__content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
   }
   .footer-logo img {
     width: 35%;
@@ -304,7 +329,11 @@ footer {
     margin-left: -21px;
   }
   .restaurant__content {
-    gap: 30px;
+    gap: 50px;
+  }
+  .restaurant__item {
+    width: 450px;
+    flex-basis: 50%;
   }
   .header-menu a {
     margin: 0% 30% 0% 5%;
@@ -322,6 +351,16 @@ footer {
   main {
     border-radius: 60px 60px 0px 0px;
     top: -50px;
+  }
+  .menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
   }
   .menu > p::after {
     width: 3%;

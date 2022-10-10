@@ -153,6 +153,7 @@ header {
     }
   }
 }
+
 // menu page start
 .header-menu {
   display: flex;
@@ -181,16 +182,31 @@ main {
   position: relative;
   top: -40px;
 }
+
+.menu {
+  > p::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 4%;
+      height: 3px;
+      background-color: $tertiary;
+    }
+  }  
+
 .menu__item {
   background-color: #fff;
   box-shadow: 0px 1px 10px hsl(0, 0%, 85%);
   border-radius: 20px;
   padding: 7px 20px 13px 15px;
   margin: 5% 0%;
+  gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  p,
+  p {
+    margin: 3.5% 0% 0% 0%;
+  }
   h3 {
     margin: 3.5% 0%;
   }
@@ -233,8 +249,16 @@ footer {
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
   padding: 5% 5% 10% 5%;
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+  }
+  div {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .footer-logo {
@@ -277,10 +301,9 @@ footer {
   }
 
   .restaurant__content {
-    // margin: 4% 0%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
   }
   .restaurant__item {
@@ -300,6 +323,8 @@ footer {
       align-self: center;
     }
   }
+
+
   .menu {
     > p {
       &::after {
@@ -310,12 +335,15 @@ footer {
 
   // footer start
 
-  footer {
-    gap: 20px;
-    padding: 5% 5% 10% 10%;
+  .footer__content {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
     img {
       width: 35%;
     }
@@ -366,7 +394,11 @@ footer {
   }
 
   .restaurant__content {
-    gap: 30px;
+    gap: 50px;
+  }
+  .restaurant__item {
+    width: 450px;
+    flex-basis: calc(100% / 2);
   }
 
   // main end
@@ -395,10 +427,20 @@ footer {
     top: -50px;
   }
 
+  .menu-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
   .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
     > p {
       &::after {
         width: 3%;
+
       }
     }
     .menu__item {
