@@ -204,12 +204,29 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  position: relative;
   p {
     margin: 3.5% 0% 0% 0%;
   }
   h3 {
     margin: 3.5% 0%;
   }
+  .check {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    padding: 5.5%;
+    background-color: $tertiary;
+    border-radius: 0px 20px 20px 0px;
+    opacity: 0;
+    .fa-circle-check {
+      font-size: 25px;
+      color: #fff;
+    }
+  }
+    &:hover .check {
+      opacity: 1;
+    }
 }
 .menu-restaurant {
   display: flex;
