@@ -206,10 +206,13 @@ main {
   position: absolute;
   right: 0%;
   top: 0%;
-  padding: 5.5%;
+  padding: 0% 5.5%;
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
   opacity: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .menu__item .check .fa-circle-check {
   font-size: 25px;
