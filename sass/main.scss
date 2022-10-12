@@ -14,6 +14,10 @@ body {
 h1 {
   font-family: "Shrikhand", cursive;
 }
+// div laoder
+//  loader page 90% opacity 1
+// 10% opacity 0
+
 // header start
 
 header {
@@ -185,14 +189,14 @@ main {
 
 .menu {
   > p::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 4%;
-      height: 3px;
-      background-color: $tertiary;
-    }
-  }  
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4%;
+    height: 3px;
+    background-color: $tertiary;
+  }
+}
 
 .menu__item {
   background-color: #fff;
@@ -222,14 +226,21 @@ main {
     height: 100%;
     display: flex;
     align-items: center;
+    
+    overflow: hidden;
+    width: 0px;
     .fa-circle-check {
       font-size: 25px;
       color: #fff;
     }
   }
-    &:hover .check {
-      opacity: 1;
-    }
+  &:hover .check {
+    opacity: 1;
+    width: 65px;
+    transition: all 0.3s ease;
+    // transform: translateX(1);
+  }
+  // text-ellypsys
 }
 .menu-restaurant {
   display: flex;
@@ -343,7 +354,6 @@ footer {
       align-self: center;
     }
   }
-
 
   .menu {
     > p {
@@ -460,7 +470,6 @@ footer {
     > p {
       &::after {
         width: 3%;
-
       }
     }
     .menu__item {
