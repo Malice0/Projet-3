@@ -230,17 +230,22 @@ main {
     overflow: hidden;
     width: 0px;
     .fa-circle-check {
+      // rotate 1tour
       font-size: 25px;
       color: #fff;
+      // transform: rotate(-360deg) 0.5s ease-in-out;
     }
   }
   &:hover .check {
     opacity: 1;
     width: 65px;
     transition: all 0.3s ease;
-    // transform: translateX(1);
+    // .fa-circle-check {
+      // transform: rotate(0deg) 0.5s ease-in-out;      
+    // }
   }
   // text-ellypsys
+  // price follow check
 }
 .menu-restaurant {
   display: flex;
