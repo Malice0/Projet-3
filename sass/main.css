@@ -220,6 +220,8 @@ main {
   width: 0px;
 }
 .menu__item .check .fa-circle-check {
+  transform: rotate(-180deg);
+  transition: transform 500ms ease-in-out;
   font-size: 25px;
   color: #fff;
 }
@@ -227,6 +229,15 @@ main {
   opacity: 1;
   width: 65px;
   transition: all 0.3s ease;
+}
+.menu__item:hover .check .fa-circle-check {
+  transform: rotate(0deg);
+}
+.menu__item:hover .menu__text {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu-restaurant {
@@ -386,7 +397,7 @@ footer div {
     gap: 1%;
   }
   .menu > p::after {
-    width: 10%;
+    width: 9%;
   }
   .menu .menu__item {
     border-radius: 20px;

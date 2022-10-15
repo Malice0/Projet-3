@@ -188,16 +188,16 @@ main {
 }
 
 .menu {
-  > p{
+  > p {
     position: relative;
     &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 5%;
-    height: 3px;
-    background-color: $tertiary;
-  }
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5%;
+      height: 3px;
+      background-color: $tertiary;
+    }
   }
 }
 
@@ -229,26 +229,30 @@ main {
     height: 100%;
     display: flex;
     align-items: center;
-    
     overflow: hidden;
     width: 0px;
     .fa-circle-check {
-      // rotate 1tour
+      transform: rotate(-180deg);
+      transition: transform 500ms ease-in-out;
       font-size: 25px;
       color: #fff;
-      // transform: rotate(-360deg) 0.5s ease-in-out;
     }
   }
   &:hover .check {
     opacity: 1;
     width: 65px;
     transition: all 0.3s ease;
-    // .fa-circle-check {
-      // transform: rotate(0deg) 0.5s ease-in-out;      
-    // }
+    .fa-circle-check {
+      transform: rotate(0deg);
+    }
   }
-  // text-ellypsys
-  // price follow check
+  &:hover .menu__text {
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  // price follow check;
 }
 .menu-restaurant {
   display: flex;
@@ -474,7 +478,7 @@ footer {
     gap: 1%;
     > p {
       &::after {
-        width: 10%;
+        width: 9%;
       }
     }
     .menu__item {
