@@ -246,11 +246,16 @@ main {
       transform: rotate(0deg);
     }
   }
-  &:hover .menu__text {
-    width: 70%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  &:hover {
+    .menu__text {
+      width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .menu__price {
+      transform: translateX(-55px);
+    }
   }
   // price follow check;
 }

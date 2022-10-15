@@ -239,6 +239,9 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu__item:hover .menu__price {
+  transform: translateX(-55px);
+}
 
 .menu-restaurant {
   display: flex;
