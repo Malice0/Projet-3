@@ -241,9 +241,10 @@ main {
   &:hover .check {
     opacity: 1;
     width: 65px;
-    transition: all 0.3s ease;
+    transition: width 0.1s linear;
     .fa-circle-check {
       transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
     }
   }
   &:hover {
@@ -251,10 +252,15 @@ main {
       width: 70%;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+      .text__ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all 0.3s ease-in;
+      }
     }
     .menu__price {
       transform: translateX(-55px);
+      transition: transform 0.3s;
     }
   }
   // price follow check;

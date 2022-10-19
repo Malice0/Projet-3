@@ -228,19 +228,25 @@ main {
 .menu__item:hover .check {
   opacity: 1;
   width: 65px;
-  transition: all 0.3s ease;
+  transition: width 0.1s linear;
 }
 .menu__item:hover .check .fa-circle-check {
   transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
 }
 .menu__item:hover .menu__text {
   width: 70%;
   white-space: nowrap;
   overflow: hidden;
+}
+.menu__item:hover .menu__text .text__ellipsis {
+  overflow: hidden;
   text-overflow: ellipsis;
+  transition: all 0.3s ease-in;
 }
 .menu__item:hover .menu__price {
   transform: translateX(-55px);
+  transition: transform 0.3s;
 }
 
 .menu-restaurant {
