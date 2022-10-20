@@ -1,3 +1,23 @@
+@-webkit-keyframes menu-animation {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes menu-animation {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
@@ -199,6 +219,8 @@ main {
   align-items: flex-end;
   position: relative;
   cursor: pointer;
+  -webkit-animation: menu-animation 1.3s 0.3S both;
+          animation: menu-animation 1.3s 0.3S both;
 }
 .menu__item p {
   margin: 3.5% 0% 0% 0%;
@@ -210,13 +232,14 @@ main {
   position: absolute;
   right: 0%;
   top: 0%;
-  padding: 0% 5.5%;
+  padding: 0% 5%;
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
   opacity: 0;
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   width: 0px;
 }
