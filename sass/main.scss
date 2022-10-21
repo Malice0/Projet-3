@@ -15,7 +15,6 @@ $tertiary: #99e2d0;
 }
 // loadpage
 
-
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
@@ -205,7 +204,7 @@ main {
       content: "";
       display: block;
       position: absolute;
-      width: 5%;
+      width: 8%;
       height: 3px;
       background-color: $tertiary;
     }
@@ -224,18 +223,17 @@ main {
   align-items: flex-end;
   position: relative;
   cursor: pointer;
-  animation: menu-animation 1.3s 0.3S both;
+  animation: menu-animation 1.3s 0.3s both;
   p {
-    margin: 3.5% 0% 0% 0%;
+    margin: 10px 0% 0% 0%;
   }
   h3 {
-    margin: 3.5% 0%;
+    margin: 10px 0%;
   }
   .check {
     position: absolute;
     right: 0%;
     top: 0%;
-    padding: 0% 5%;
     background-color: $tertiary;
     border-radius: 0px 20px 20px 0px;
     opacity: 0;
@@ -255,9 +253,9 @@ main {
   &:hover .check {
     opacity: 1;
     width: 65px;
+    transition: width 0.3s ease-out;
     .fa-circle-check {
       transform: rotate(0deg);
-      transition: transform 0.3s ease-in-out;
     }
   }
   &:hover {
@@ -265,10 +263,10 @@ main {
       width: 70%;
       white-space: nowrap;
       overflow: hidden;
+      transition: width 0.3s;
       .text__ellipsis {
         overflow: hidden;
         text-overflow: ellipsis;
-        transition: all 0.3s ease-in;
       }
     }
     .menu__price {
@@ -297,7 +295,6 @@ main {
       transition: all 0.3s ease;
     }
   }
-
 }
 
 .button-container {
@@ -517,7 +514,7 @@ footer {
   }
 
   .menu {
-    flex-basis: calc(95%/2);
+    flex-basis: calc(95% / 2);
     display: flex;
     flex-direction: column;
     gap: 1%;
@@ -528,21 +525,26 @@ footer {
     }
     &:nth-child(3) {
       > p {
-      &::after {
-        width: 3%;
+        &::after {
+          width: 3%;
+        }
       }
-    }
-    }
-    .menu__item {
-      border-radius: 20px;
-      width: 100%;
-      margin: 2% 0%;
     }
     &:nth-child(3) {
       flex-basis: 100%;
     }
   }
 
+  .menu__item {
+    border-radius: 20px;
+    width: 100%;
+    margin: 2% 0%;
+    &:hover {
+      .menu__text {
+        width: 75%;
+      }
+    }
+  }
   .button-container {
     margin: 8% 0% 0% 0%;
   }
