@@ -15,48 +15,102 @@ $anim-delay: 3s / $num-bars;
     opacity: 1;
   }
 }
-@keyframes loader {
-  0%{
-    width: 15%;
-    border-radius: 30px;
+@keyframes load-first {
+  0% {
   }
-  60% {
-    border-radius: 10px;
+  25% {
+    transform: translateY(-5px);
   }
-  90% {
-    border-radius: 15px;
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(5px);
   }
   100% {
-    width: 20%;
-    border-radius: 20px;
+    transform: translateY(10px);
+  }
+}
+@keyframes shadow {
+  0% {
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
   }
 }
 // loadpage
 .load {
   width: 100%;
   height: 100vh;
+  padding: 0% 30%;
+  background-color: hsl(0, 0%, 95%);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   position: relative;
   &__bar {
     background: linear-gradient(180deg, $sondary 0%, $primary 100%);
-    height: 70px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1.5px solid #99e2d0;
-    position: absolute;
-    top: 45%;
-    animation: loader 3s both;
-    @for $i from 1 through $num-bars {
-      &--#{$i} {
-          animation-delay: $anim-delay * $i;
-       }
+    height: 6.5%;
+    width: 4%;
+    &--1 {
+      border-radius: 10px 0px 0px 10px;
+    }
+    &--1,
+    &--3,
+    &--5 {
+      animation: load-first 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+    }
+    &--2,
+    &--4 {
+      animation: load-first 0.7s 0.3s infinite
+        cubic-bezier(0.57, 0.05, 0.45, 0.86);
+    }
+    &--5 {
+      border-radius: 0px 10px 10px 0px;
+    }
+    &--6 {
+      position: absolute;
+      background: none;
+      border: none;
+      top: 49%;
+      left: 47.4%;
+      color: #fff;
+    }
   }
+  .shadow {
+    position: absolute;
+    height: 1%;
+    width: 1.5%;
+    top: 55%;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 80%);
+    filter: blur(1px);
+    animation: shadow;
+    &--1 {
+      left: 46%;
+    }
+    &--2 {
+      left: 47.65%;
+    }
+    &--4 {
+      left: 50.8%;
+    }
+    &--5 {
+      left: 52.4%;
+    }
+    &--1,
+    &--3,
+    &--5 {
+      animation: shadow 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+    }
+    &--2,
+    &--4 {
+      animation: shadow 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+    }
   }
 }
-
 
 body {
   width: 100%;
