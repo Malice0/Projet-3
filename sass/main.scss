@@ -46,10 +46,10 @@ $anim-delay: 3s / $num-bars;
     background-color: hsla(0, 0%, 95%, 1);
   }
   90% {
-  }
-  100% {
     background-color: hsla(0, 0%, 95%, 0.5);
     opacity: 1;
+  }
+  100% {
   }
 }
 // loadpage
@@ -132,6 +132,9 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: rgb(246, 246, 246);
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 h1 {
@@ -288,6 +291,7 @@ header {
   a {
     .fa-arrow-left {
       font-size: 25px;
+      cursor: pointer;
     }
     margin: 0% 20% 0% 5%;
     align-self: center;
