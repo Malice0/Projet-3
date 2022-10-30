@@ -57,6 +57,21 @@ $gradiant: linear-gradient(180deg, $sondary 0%, $primary 100%);
   100% {
   }
 }
+@keyframes button {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 3s;
+  }
+}
 // loadpage
 .load {
   width: 100%;
@@ -67,8 +82,6 @@ $gradiant: linear-gradient(180deg, $sondary 0%, $primary 100%);
   align-items: center;
   position: absolute;
   animation: load 3s;
-  z-index: 0;
-  transition: z-index 3.3s;
   opacity: 0;
   &__bar {
     background: linear-gradient(180deg, $sondary 0%, $primary 100%);
@@ -195,13 +208,12 @@ header {
     border-radius: 25px;
     padding: 0.3% 6%;
     margin-bottom: 50px;
+    z-index: 2;
+    animation: button 3s;
     @include button;
     &:hover {
-      background: linear-gradient(
-        180deg,
-        hsl(317, 100%, 76%) 0%,
-        hsl(267, 66%, 63%) 100%
-      );
+      opacity: 0.9;
+      transition: opacity 0.5s;
       box-shadow: 0 3px 8px hsl(0, 0%, 30%);
     }
   }
@@ -443,11 +455,8 @@ main {
   border-radius: 50px;
   @include button;
   &:hover {
-    background: linear-gradient(
-      180deg,
-      hsl(317, 100%, 76%) 0%,
-      hsl(267, 66%, 63%) 100%
-    );
+    opacity: 0.9;
+    transition: opacity 0.5s;
     box-shadow: 0 3px 8px hsl(0, 0%, 30%);
   }
 }
