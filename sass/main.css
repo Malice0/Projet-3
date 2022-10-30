@@ -86,6 +86,7 @@
   position: absolute;
   -webkit-animation: load 3s;
           animation: load 3s;
+  z-index: 0;
   opacity: 0;
 }
 .load__bar {
@@ -204,12 +205,17 @@ header img {
   font-size: 150%;
 }
 .explore .button {
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   border-radius: 25px;
   padding: 0.3% 6%;
   margin-bottom: 50px;
   color: #fff;
   box-shadow: 0 3px 8px gray;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  cursor: pointer;
+}
+.explore .button:hover {
+  background: linear-gradient(180deg, hsl(317deg, 100%, 76%) 0%, hsl(267deg, 66%, 63%) 100%);
+  box-shadow: 0 3px 8px hsl(0deg, 0%, 30%);
 }
 
 .functioning {
@@ -309,6 +315,7 @@ header img {
   justify-content: left;
 }
 .header-menu a {
+  z-index: 9;
   margin: 0% 20% 0% 5%;
   align-self: center;
 }
@@ -437,14 +444,18 @@ main {
 
 .button-menu {
   width: 40%;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   display: flex;
   justify-content: center;
   padding: 3.5%;
   border-radius: 50px;
   color: #fff;
   box-shadow: 0 3px 8px gray;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   cursor: pointer;
+}
+.button-menu:hover {
+  background: linear-gradient(180deg, hsl(317deg, 100%, 76%) 0%, hsl(267deg, 66%, 63%) 100%);
+  box-shadow: 0 3px 8px hsl(0deg, 0%, 30%);
 }
 
 footer {

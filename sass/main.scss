@@ -1,6 +1,13 @@
 $primary: #9356dc;
 $sondary: #ff79da;
 $tertiary: #99e2d0;
+$gradiant: linear-gradient(180deg, $sondary 0%, $primary 100%);
+@mixin button {
+  color: #fff;
+  box-shadow: 0 3px 8px gray;
+  background: $gradiant;
+  cursor: pointer;
+}
 
 $num-bars: 3;
 $anim-delay: 3s / $num-bars;
@@ -62,6 +69,7 @@ $anim-delay: 3s / $num-bars;
   align-items: center;
   position: absolute;
   animation: load 3s;
+  z-index: 0;
   opacity: 0;
   &__bar {
     background: linear-gradient(180deg, $sondary 0%, $primary 100%);
@@ -140,9 +148,6 @@ body {
 h1 {
   font-family: "Shrikhand", cursive;
 }
-// div laoder
-//  loader page 90% opacity 1
-// 10% opacity 0
 
 // header start
 
@@ -187,12 +192,14 @@ header {
     font-size: 150%;
   }
   .button {
-    background: linear-gradient(180deg, $sondary 0%, $primary 100%);
     border-radius: 25px;
     padding: 0.3% 6%;
     margin-bottom: 50px;
-    color: #fff;
-    box-shadow: 0 3px 8px gray;
+    @include button;
+    &:hover {
+    background: linear-gradient(180deg, hsl(317, 100%, 76%) 0%, hsl(267, 66%, 63%) 100%);
+    box-shadow: 0 3px 8px hsl(0, 0%, 30%);
+    }
   }
 }
 
@@ -289,6 +296,7 @@ header {
   display: flex;
   justify-content: left;
   a {
+      z-index: 9;
     .fa-arrow-left {
       font-size: 25px;
       cursor: pointer;
@@ -420,14 +428,15 @@ main {
 }
 .button-menu {
   width: 40%;
-  background: linear-gradient(180deg, $sondary 0%, $primary 100%);
   display: flex;
   justify-content: center;
   padding: 3.5%;
   border-radius: 50px;
-  color: #fff;
-  box-shadow: 0 3px 8px gray;
-  cursor: pointer;
+  @include button;
+  &:hover {
+  background: linear-gradient(180deg, hsl(317, 100%, 76%) 0%, hsl(267, 66%, 63%) 100%);
+  box-shadow: 0 3px 8px hsl(0, 0%, 30%);
+  }
 }
 // menu page end
 
