@@ -93,7 +93,7 @@
 .load__bar {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   height: 6.5%;
-  width: 4%;
+  width: 9%;
 }
 .load__bar:hover {
   -webkit-animation-play-state: paused;
@@ -101,6 +101,7 @@
 }
 .load__bar--1 {
   border-radius: 10px 0px 0px 10px;
+  position: relative;
 }
 .load__bar--1, .load__bar--3, .load__bar--5 {
   -webkit-animation: load-first 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
@@ -118,13 +119,13 @@
   background: none;
   border: none;
   top: 49%;
-  left: 47.4%;
+  left: 41.5%;
   color: #fff;
 }
 .load .shadow {
   position: absolute;
   height: 1%;
-  width: 1.5%;
+  width: 5%;
   top: 55%;
   border-radius: 5px;
   background-color: hsl(0deg, 0%, 80%);
@@ -133,16 +134,16 @@
           animation: shadow;
 }
 .load .shadow--1 {
-  left: 46%;
+  left: 40%;
 }
 .load .shadow--2 {
-  left: 47.65%;
+  left: 44%;
 }
 .load .shadow--4 {
-  left: 50.8%;
+  left: 51%;
 }
 .load .shadow--5 {
-  left: 52.4%;
+  left: 55%;
 }
 .load .shadow--1, .load .shadow--3, .load .shadow--5 {
   -webkit-animation: shadow 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
@@ -492,6 +493,28 @@ footer {
 }
 
 @media all and (min-width: 767px) {
+  .load__bar {
+    width: 7%;
+  }
+  .load__bar--6 {
+    left: 45%;
+  }
+  .load .shadow {
+    height: 1%;
+    width: 3%;
+  }
+  .load .shadow--1 {
+    left: 43%;
+  }
+  .load .shadow--2 {
+    left: 46%;
+  }
+  .load .shadow--4 {
+    left: 51.5%;
+  }
+  .load .shadow--5 {
+    left: 54%;
+  }
   header img {
     margin: 3% 0% 3%;
   }
@@ -544,6 +567,12 @@ footer {
   }
 }
 @media all and (min-width: 993px) {
+  .load__bar {
+    width: 7%;
+  }
+  .load__bar--6 {
+    left: 46.5%;
+  }
   header img {
     width: 20%;
     margin: 2%;
@@ -595,10 +624,10 @@ footer {
   .menu-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 3%;
   }
   .menu {
-    flex-basis: 50%;
+    flex-basis: 48%;
     display: flex;
     flex-direction: column;
     gap: 1%;

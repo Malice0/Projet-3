@@ -9,8 +9,6 @@ $gradiant: linear-gradient(180deg, $sondary 0%, $primary 100%);
   cursor: pointer;
 }
 
-$num-bars: 3;
-$anim-delay: 3s / $num-bars;
 // keyframe menu
 @keyframes menu-animation {
   0% {
@@ -75,12 +73,13 @@ $anim-delay: 3s / $num-bars;
   &__bar {
     background: linear-gradient(180deg, $sondary 0%, $primary 100%);
     height: 6.5%;
-    width: 4%;
+    width: 9%;
     &:hover {
       animation-play-state: paused;
     }
     &--1 {
       border-radius: 10px 0px 0px 10px;
+      position: relative;
     }
     &--1,
     &--3,
@@ -100,30 +99,30 @@ $anim-delay: 3s / $num-bars;
       background: none;
       border: none;
       top: 49%;
-      left: 47.4%;
+      left: 41.5%;
       color: #fff;
     }
   }
   .shadow {
     position: absolute;
     height: 1%;
-    width: 1.5%;
+    width: 5%;
     top: 55%;
     border-radius: 5px;
     background-color: hsl(0, 0%, 80%);
     filter: blur(1px);
     animation: shadow;
     &--1 {
-      left: 46%;
+      left: 40%;
     }
     &--2 {
-      left: 47.65%;
+      left: 44%;
     }
     &--4 {
-      left: 50.8%;
+      left: 51%;
     }
     &--5 {
-      left: 52.4%;
+      left: 55%;
     }
     &--1,
     &--3,
@@ -198,8 +197,12 @@ header {
     margin-bottom: 50px;
     @include button;
     &:hover {
-    background: linear-gradient(180deg, hsl(317, 100%, 76%) 0%, hsl(267, 66%, 63%) 100%);
-    box-shadow: 0 3px 8px hsl(0, 0%, 30%);
+      background: linear-gradient(
+        180deg,
+        hsl(317, 100%, 76%) 0%,
+        hsl(267, 66%, 63%) 100%
+      );
+      box-shadow: 0 3px 8px hsl(0, 0%, 30%);
     }
   }
 }
@@ -302,7 +305,7 @@ header {
   display: flex;
   justify-content: left;
   a {
-      z-index: 9;
+    z-index: 9;
     .fa-arrow-left {
       font-size: 25px;
       cursor: pointer;
@@ -440,8 +443,12 @@ main {
   border-radius: 50px;
   @include button;
   &:hover {
-  background: linear-gradient(180deg, hsl(317, 100%, 76%) 0%, hsl(267, 66%, 63%) 100%);
-  box-shadow: 0 3px 8px hsl(0, 0%, 30%);
+    background: linear-gradient(
+      180deg,
+      hsl(317, 100%, 76%) 0%,
+      hsl(267, 66%, 63%) 100%
+    );
+    box-shadow: 0 3px 8px hsl(0, 0%, 30%);
   }
 }
 // menu page end
@@ -484,6 +491,31 @@ footer {
 
 // tab start
 @media all and (min-width: 767px) {
+  .load {
+    &__bar {
+      width: 7%;
+      &--6 {
+        left: 45%;
+      }
+    }
+    .shadow {
+      height: 1%;
+      width: 3%;
+      &--1 {
+        left: 43%;
+      }
+      &--2 {
+        left: 46%;
+      }
+      &--4 {
+        left: 51.5%;
+      }
+      &--5 {
+        left: 54%;
+      }
+    }
+  }
+
   // header start
   header {
     img {
@@ -568,6 +600,15 @@ footer {
 // desktop start
 
 @media all and (min-width: 993px) {
+  .load {
+    &__bar {
+      width: 7%;
+      &--6 {
+        left: 46.5%;
+      }
+    }
+  }
+
   // header start
   header {
     img {
@@ -641,11 +682,11 @@ footer {
   .menu-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 3%;
   }
 
   .menu {
-    flex-basis: calc(100% / 2);
+    flex-basis: calc(96% / 2);
     display: flex;
     flex-direction: column;
     gap: 1%;
