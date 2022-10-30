@@ -70,6 +70,7 @@ $anim-delay: 3s / $num-bars;
   position: absolute;
   animation: load 3s;
   z-index: 0;
+  transition: z-index 3.3s;
   opacity: 0;
   &__bar {
     background: linear-gradient(180deg, $sondary 0%, $primary 100%);
@@ -238,6 +239,11 @@ header {
 
 .content__item:hover i {
   color: $primary;
+}
+
+.restaurant__content {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .restaurant__item {
@@ -639,7 +645,7 @@ footer {
   }
 
   .menu {
-    flex-basis: calc(95% / 2);
+    flex-basis: calc(100% / 2);
     display: flex;
     flex-direction: column;
     gap: 1%;
