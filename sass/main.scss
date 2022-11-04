@@ -53,23 +53,10 @@ $gradiant: linear-gradient(180deg, $sondary 0%, $primary 100%);
   90% {
     background-color: hsla(0, 0%, 95%, 0.5);
     opacity: 1;
+    visibility: visible;
   }
   100% {
-  }
-}
-@keyframes button {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out 3s;
+    visibility: hidden;
   }
 }
 // loadpage
@@ -81,15 +68,12 @@ $gradiant: linear-gradient(180deg, $sondary 0%, $primary 100%);
   justify-content: center;
   align-items: center;
   position: absolute;
-  animation: load 3s;
+  animation: load 3s forwards;
   opacity: 0;
   &__bar {
     background: linear-gradient(180deg, $sondary 0%, $primary 100%);
     height: 6.5%;
-    width: 9%;
-    &:hover {
-      animation-play-state: paused;
-    }
+    width: 20px;
     &--1 {
       border-radius: 10px 0px 0px 10px;
       position: relative;
@@ -208,8 +192,6 @@ header {
     border-radius: 25px;
     padding: 0.3% 6%;
     margin-bottom: 50px;
-    z-index: 2;
-    animation: button 3s;
     @include button;
     &:hover {
       opacity: 0.9;
@@ -317,7 +299,6 @@ header {
   display: flex;
   justify-content: left;
   a {
-    z-index: 9;
     .fa-arrow-left {
       font-size: 25px;
       cursor: pointer;
@@ -502,7 +483,6 @@ footer {
 @media all and (min-width: 767px) {
   .load {
     &__bar {
-      width: 7%;
       &--6 {
         left: 45%;
       }
@@ -611,9 +591,8 @@ footer {
 @media all and (min-width: 993px) {
   .load {
     &__bar {
-      width: 7%;
       &--6 {
-        left: 46.5%;
+        left: 47.5%;
       }
     }
   }

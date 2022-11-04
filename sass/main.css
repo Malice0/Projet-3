@@ -64,6 +64,10 @@
   90% {
     background-color: hsla(0deg, 0%, 95%, 0.5);
     opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 @keyframes load {
@@ -74,36 +78,10 @@
   90% {
     background-color: hsla(0deg, 0%, 95%, 0.5);
     opacity: 1;
-  }
-}
-@-webkit-keyframes button {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  90% {
-    opacity: 0.7;
+    visibility: visible;
   }
   100% {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out 3s;
-  }
-}
-@keyframes button {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out 3s;
+    visibility: hidden;
   }
 }
 .load {
@@ -114,18 +92,14 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  -webkit-animation: load 3s;
-          animation: load 3s;
+  -webkit-animation: load 3s forwards;
+          animation: load 3s forwards;
   opacity: 0;
 }
 .load__bar {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   height: 6.5%;
-  width: 9%;
-}
-.load__bar:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  width: 20px;
 }
 .load__bar--1 {
   border-radius: 10px 0px 0px 10px;
@@ -238,9 +212,6 @@ header img {
   border-radius: 25px;
   padding: 0.3% 6%;
   margin-bottom: 50px;
-  z-index: 2;
-  -webkit-animation: button 3s;
-          animation: button 3s;
   color: #fff;
   box-shadow: 0 3px 8px gray;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
@@ -354,7 +325,6 @@ header img {
   justify-content: left;
 }
 .header-menu a {
-  z-index: 9;
   margin: 0% 20% 0% 5%;
   align-self: center;
 }
@@ -526,9 +496,6 @@ footer {
 }
 
 @media all and (min-width: 767px) {
-  .load__bar {
-    width: 7%;
-  }
   .load__bar--6 {
     left: 45%;
   }
@@ -600,11 +567,8 @@ footer {
   }
 }
 @media all and (min-width: 993px) {
-  .load__bar {
-    width: 7%;
-  }
   .load__bar--6 {
-    left: 46.5%;
+    left: 47.5%;
   }
   header img {
     width: 20%;
