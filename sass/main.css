@@ -92,6 +92,9 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+  -webkit-animation: load 3s forwards;
+          animation: load 3s forwards;
+  opacity: 0;
 }
 .load__bar {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
@@ -164,6 +167,7 @@ body::-webkit-scrollbar {
 
 h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 300%;
 }
 
 header {
@@ -171,10 +175,6 @@ header {
   justify-content: center;
   box-shadow: inset 0px -1px 2px lightgray;
   background-color: hsl(0deg, 0%, 100%);
-}
-header img {
-  width: 40%;
-  margin: 5% 0% 3%;
 }
 
 .location {
@@ -205,16 +205,17 @@ header img {
 .explore > p {
   font-size: 150%;
 }
-.explore .button {
-  border-radius: 25px;
-  padding: 0.3% 6%;
+.explore button {
+  border-radius: 50px;
   margin-bottom: 50px;
+  font-size: larger;
+  padding: 3.5%;
   color: #fff;
   box-shadow: 0 3px 8px gray;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   cursor: pointer;
 }
-.explore .button:hover {
+.explore button:hover {
   opacity: 0.9;
   transition: opacity 0.5s;
   box-shadow: 0 3px 8px hsl(0deg, 0%, 30%);
@@ -447,19 +448,19 @@ main {
   justify-content: center;
   margin: 13% 0% 0% 0%;
 }
-
-.button-menu {
+.button-container button {
   width: 40%;
   display: flex;
   justify-content: center;
   padding: 3.5%;
   border-radius: 50px;
+  font-size: larger;
   color: #fff;
   box-shadow: 0 3px 8px gray;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   cursor: pointer;
 }
-.button-menu:hover {
+.button-container button:hover {
   opacity: 0.9;
   transition: opacity 0.5s;
   box-shadow: 0 3px 8px hsl(0deg, 0%, 30%);
