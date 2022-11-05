@@ -213,6 +213,7 @@ header {
   color: #fff;
   box-shadow: 0 3px 8px gray;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  width: 300px;
   cursor: pointer;
 }
 .explore button:hover {
@@ -246,6 +247,7 @@ header {
 }
 .content__item:hover {
   background-color: hsl(267deg, 66%, 96%);
+  transition: background-color 0.3s;
 }
 .content__item div {
   background-color: #9356dc;
@@ -449,7 +451,6 @@ header {
   margin: 13% 0% 0% 0%;
 }
 .button-container button {
-  width: 40%;
   display: flex;
   justify-content: center;
   padding: 3.5%;
@@ -458,6 +459,7 @@ header {
   color: #fff;
   box-shadow: 0 3px 8px gray;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  width: 300px;
   cursor: pointer;
 }
 .button-container button:hover {
@@ -603,6 +605,9 @@ footer {
     padding: 0.5% 2%;
     margin-left: -21px;
   }
+  .explore button {
+    padding: 2.5% 3%;
+  }
   .restaurant__content {
     gap: 50px;
   }
@@ -656,9 +661,8 @@ footer {
   .button-container {
     margin: 8% 0% 0% 0%;
   }
-  .button-menu {
-    width: 25%;
-    padding: 2%;
+  .button-container button {
+    padding: 2.5% 3%;
     font-size: large;
   }
   footer {

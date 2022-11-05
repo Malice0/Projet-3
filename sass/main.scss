@@ -6,6 +6,7 @@ $gradiant: linear-gradient(180deg, $sondary 0%, $primary 100%);
   color: #fff;
   box-shadow: 0 3px 8px gray;
   background: $gradiant;
+  width: 300px;
   cursor: pointer;
 }
 
@@ -221,6 +222,7 @@ header {
   font-weight: 600;
   &:hover {
     background-color: hsl(267, 66%, 96%);
+    transition: background-color 0.3s;
   }
   // number
   div {
@@ -429,7 +431,6 @@ header {
   justify-content: center;
   margin: 13% 0% 0% 0%;
   button {
-    width: 40%;
     display: flex;
     justify-content: center;
     padding: 3.5%;
@@ -648,6 +649,12 @@ footer {
     }
   }
 
+  .explore {
+    button {
+      padding: 2.5% 3%;
+    }
+  }
+
   .restaurant__content {
     gap: 50px;
   }
@@ -716,12 +723,10 @@ footer {
   }
   .button-container {
     margin: 8% 0% 0% 0%;
-  }
-
-  .button-menu {
-    width: 25%;
-    padding: 2%;
-    font-size: large;
+    button {
+      padding: 2.5% 3%;
+      font-size: large;
+    }
   }
 
   // menu page end
