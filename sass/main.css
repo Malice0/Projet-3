@@ -323,7 +323,7 @@ header {
   justify-content: left;
 }
 .header-menu a {
-  margin: 0% 20% 0% 5%;
+  margin: 0% 10% 0% 5%;
   align-self: center;
 }
 .header-menu a .fa-arrow-left {
@@ -338,7 +338,7 @@ header {
      object-fit: cover;
 }
 
-main {
+.main-menu {
   background-color: rgb(246, 246, 246);
   padding: 3% 5%;
   border-radius: 40px 40px 0px 0px;
