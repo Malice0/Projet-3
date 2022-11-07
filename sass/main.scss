@@ -453,13 +453,10 @@ header {
 footer {
   margin-top: 10%;
   background-color: hsl(0, 0%, 20%);
-  color: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 5% 5% 10% 5%;
-}
-
 .footer-logo {
   img {
     width: 33%;
@@ -469,14 +466,13 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  div {
-    cursor: pointer;
-  }
   i {
     width: 13px;
     margin-right: 15px;
   }
 }
+}
+
 
 // footer end
 
