@@ -56,6 +56,7 @@
   font-family: "Shrikhand", cursive;
   opacity: 0;
   z-index: 99;
+  max-width: 1500px;
 }
 .load__bar {
   background: #ff79da;
@@ -90,39 +91,13 @@
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 0 5px 5px #99e2d0;
 }
-.load .shadow {
-  position: absolute;
-  height: 1%;
-  width: 20px;
-  top: 57%;
-  border-radius: 5px;
-  background-color: hsl(0, 0%, 70%);
-  filter: blur(1px);
-  animation: shadow;
-}
-.load .shadow--1 {
-  left: 39.9%;
-}
-.load .shadow--2 {
-  left: 43.5%;
-}
-.load .shadow--4 {
-  left: 52.5%;
-}
-.load .shadow--5 {
-  left: 56.5%;
-}
-.load .shadow--1, .load .shadow--3, .load .shadow--5 {
-  animation: shadow 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
-}
-.load .shadow--2, .load .shadow--4 {
-  animation: shadow 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
-}
 
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   background-color: rgb(246, 246, 246);
+  max-width: 1500px;
+  margin: 0 auto;
 }
 body::-webkit-scrollbar {
   display: none;
