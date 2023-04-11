@@ -1,77 +1,38 @@
-@-webkit-keyframes load {
-  0% {
-    opacity: 1;
-    background-color: hsl(0deg, 0%, 95%);
-  }
-  90% {
-    background-color: hsla(0deg, 0%, 95%, 0.5);
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
 @keyframes load {
   0% {
+    display: flex;
+    background-color: hsl(0, 0%, 95%);
     opacity: 1;
-    background-color: hsl(0deg, 0%, 95%);
+    visibility: visible;
   }
   90% {
-    background-color: hsla(0deg, 0%, 95%, 0.5);
+    background-color: hsla(0, 0%, 95%, 0.5);
     opacity: 1;
     visibility: visible;
   }
   100% {
     visibility: hidden;
-  }
-}
-@-webkit-keyframes load-first {
-  25% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  75% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(10px);
+    z-index: 0;
   }
 }
 @keyframes load-first {
-  25% {
-    transform: translateY(-5px);
+  0% {
+    transform: translateY(0px);
   }
-  50% {
+  25% {
     transform: translateY(-10px);
   }
+  50% {
+    transform: translateY(-20px);
+    transition: visibility 0.3s ease-in-out;
+  }
   75% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(10px);
-  }
-}
-@-webkit-keyframes shadow {
-  40% {
-    opacity: 0;
-  }
-}
-@keyframes shadow {
-  40% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes menu-animation {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
+    transform: translateY(-250px);
+    transition: visibility 0.3s ease-in-out;
   }
   100% {
     transform: translateY(0px);
-    opacity: 1;
+    transition: visibility 0.3s ease-in-out;
   }
 }
 @keyframes menu-animation {
@@ -87,42 +48,47 @@
 .load {
   width: 100%;
   height: 100vh;
-  padding: 0% 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  -webkit-animation: load 3s forwards;
-          animation: load 3s forwards;
+  position: fixed;
+  animation: load 3s forwards;
+  font-family: "Shrikhand", cursive;
   opacity: 0;
+  z-index: 99;
 }
 .load__bar {
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  height: 60px;
+  background: #ff79da;
+  height: 20px;
   width: 20px;
+  border-radius: 30px;
 }
 .load__bar--1 {
-  border-radius: 10px 0px 0px 10px;
-  position: relative;
+  animation: load-first 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
 }
-.load__bar--1, .load__bar--3, .load__bar--5 {
-  -webkit-animation: load-first 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
-          animation: load-first 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+.load__bar--2 {
+  animation: load-first 0.7s 0.1s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
 }
-.load__bar--2, .load__bar--4 {
-  -webkit-animation: load-first 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
-          animation: load-first 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+.load__bar--3 {
+  animation: load-first 0.7s 0.2s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+}
+.load__bar--4 {
+  animation: load-first 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
 }
 .load__bar--5 {
-  border-radius: 0px 10px 10px 0px;
+  animation: load-first 0.7s 0.4s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
 }
 .load__bar--6 {
   position: absolute;
   background: none;
   border: none;
-  top: 49%;
-  left: 41.5%;
   color: #fff;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  padding: 10px 15px;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 0 5px 5px #99e2d0;
 }
 .load .shadow {
   position: absolute;
@@ -130,10 +96,9 @@
   width: 20px;
   top: 57%;
   border-radius: 5px;
-  background-color: hsl(0deg, 0%, 70%);
+  background-color: hsl(0, 0%, 70%);
   filter: blur(1px);
-  -webkit-animation: shadow;
-          animation: shadow;
+  animation: shadow;
 }
 .load .shadow--1 {
   left: 39.9%;
@@ -148,12 +113,10 @@
   left: 56.5%;
 }
 .load .shadow--1, .load .shadow--3, .load .shadow--5 {
-  -webkit-animation: shadow 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
-          animation: shadow 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+  animation: shadow 0.7s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
 }
 .load .shadow--2, .load .shadow--4 {
-  -webkit-animation: shadow 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
-          animation: shadow 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
+  animation: shadow 0.7s 0.3s infinite cubic-bezier(0.57, 0.05, 0.45, 0.86);
 }
 
 body {
@@ -174,7 +137,7 @@ header {
   display: flex;
   justify-content: center;
   box-shadow: inset 0px -1px 2px lightgray;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .location {
@@ -182,7 +145,7 @@ header {
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  background-color: hsl(0deg, 0%, 90%);
+  background-color: hsl(0, 0%, 90%);
   font-size: large;
 }
 
@@ -192,7 +155,7 @@ header {
 
 .explore {
   text-align: center;
-  background-color: hsl(0deg, 0%, 95%);
+  background-color: hsl(0, 0%, 95%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -219,11 +182,11 @@ header {
 .explore button:hover {
   opacity: 0.9;
   transition: opacity 0.5s;
-  box-shadow: 0 3px 8px hsl(0deg, 0%, 30%);
+  box-shadow: 0 3px 8px hsl(0, 0%, 30%);
 }
 
 .functioning {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   padding: 4% 4% 16% 4%;
 }
 
@@ -239,14 +202,14 @@ header {
   align-items: center;
   gap: 20px;
   border-radius: 15px;
-  box-shadow: 0px 4px 6px hsl(0deg, 0%, 95%);
+  box-shadow: 0px 4px 6px hsl(0, 0%, 95%);
   width: 90%;
   padding: 1%;
-  background-color: hsl(0deg, 0%, 97%);
+  background-color: hsl(0, 0%, 97%);
   font-weight: 600;
 }
 .content__item:hover {
-  background-color: hsl(267deg, 66%, 96%);
+  background-color: hsl(267, 66%, 96%);
   transition: background-color 0.3s;
 }
 .content__item div {
@@ -277,7 +240,7 @@ header {
   right: 3%;
   top: 4%;
   background-color: #99e2d0;
-  color: hsl(165deg, 56%, 40%);
+  color: hsl(165, 56%, 40%);
   padding: 1.5%;
   font-weight: 600;
 }
@@ -362,7 +325,7 @@ header {
 
 .menu__item {
   background-color: #fff;
-  box-shadow: 0px 1px 10px hsl(0deg, 0%, 85%);
+  box-shadow: 0px 1px 10px hsl(0, 0%, 85%);
   border-radius: 20px;
   padding: 7px 20px 13px 15px;
   margin: 5% 0%;
@@ -372,8 +335,7 @@ header {
   align-items: flex-end;
   position: relative;
   cursor: pointer;
-  -webkit-animation: menu-animation 1.3s both;
-          animation: menu-animation 1.3s both;
+  animation: menu-animation 1.3s both;
 }
 .menu__item p {
   margin: 10px 0% 0% 0%;
@@ -465,52 +427,31 @@ header {
 .button-container button:hover {
   opacity: 0.9;
   transition: opacity 0.5s;
-  box-shadow: 0 3px 8px hsl(0deg, 0%, 30%);
+  box-shadow: 0 3px 8px hsl(0, 0%, 30%);
 }
 
 footer {
   margin-top: 10%;
-  background-color: hsl(0deg, 0%, 20%);
-  color: #fff;
+  background-color: hsl(0, 0%, 20%);
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 5% 5% 10% 5%;
 }
-
-.footer-logo img {
+footer .footer-logo img {
   width: 33%;
 }
-
-.footer__content {
+footer .footer__content {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.footer__content div {
-  cursor: pointer;
-}
-.footer__content i {
+footer .footer__content i {
   width: 13px;
   margin-right: 15px;
 }
 
 @media all and (min-width: 767px) {
-  .load__bar--6 {
-    left: 45%;
-  }
-  .load .shadow--1 {
-    left: 43.9%;
-  }
-  .load .shadow--2 {
-    left: 46.5%;
-  }
-  .load .shadow--4 {
-    left: 51.5%;
-  }
-  .load .shadow--5 {
-    left: 54%;
-  }
   header img {
     margin: 3% 0% 3%;
   }
@@ -563,24 +504,6 @@ footer {
   }
 }
 @media all and (min-width: 993px) {
-  .load__bar--6 {
-    left: 47.5%;
-  }
-  .load .shadow {
-    top: 54%;
-  }
-  .load .shadow--1 {
-    left: 46.5%;
-  }
-  .load .shadow--2 {
-    left: 47.9%;
-  }
-  .load .shadow--4 {
-    left: 50.8%;
-  }
-  .load .shadow--5 {
-    left: 52%;
-  }
   header img {
     width: 20%;
     margin: 2%;
@@ -589,7 +512,7 @@ footer {
     font-size: 190%;
   }
   .functioning {
-    background-color: hsl(0deg, 0%, 100%);
+    background-color: hsl(0, 0%, 100%);
     padding: 4% 4% 8% 4%;
   }
   .functioning__content {
